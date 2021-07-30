@@ -14,8 +14,7 @@ Si no eres programador, y quieres usar la api de una manera sencilla y sin compl
 
 $data = array(
     'apikey' => '',
-    'token' => '', 
-    'chatid' => ''
+    'sender' => ''
 );
 
 $result = file_get_contents('http://c2271028.ferozo.com/api', false, stream_context_create(array('http' => 
